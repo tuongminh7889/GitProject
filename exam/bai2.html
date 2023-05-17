@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    let n = +prompt('Nhap do dai cua mang(<=100)');
+    let snt = [];
+    let tong = 0;
+    if (n < 100) {
+        for (let i = 0; i < n; i++) {
+            mang[i] = +prompt("Nhap vap phan tu o vi tri" + i);
+        }
+        for (let i = 0; i < n; i++) {
+            let dem = 0;
+
+            if (mang[i] < 2) {
+                snt.push(mang[i]);
+             //   tong += i;
+            }
+            if (mang[i] > 2) {
+                for (let j = 2; j < n; j++) {
+                    if (mang[i] % j == 0) {
+                        dem++;
+                    }
+                }
+                if (dem == 0) {
+                    snt.push(mang[i]);
+                    tong += parseInt(mang[i]);
+                }
+            }
+        }
+        document.write('mang nhap vao la'+mang);
+        document.write("cac so nguyen to co trong mang"+snt+'<br>');
+        document.write('tong cac so nguyen to trong do dai n '+tong);
+    }
+</script>
+</body>
+</html>

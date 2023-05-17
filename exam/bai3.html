@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("nhap vao 1 chuoi");
+
+    function kiemTra(chuoi1) {
+        let mang = chuoi1.split("");
+        let mang1 = mang;
+        let mang2 = [];
+        let dem = 0;
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang.length; j++) {
+                if (mang[j] != "" && mang1[j] == mang[i]) {
+                    dem++;
+                    if (dem > 1) {
+                        mang2.push(mang1[j]);
+                    }
+                }
+            }
+            dem = 0;
+        }
+        return mang2;
+    }
+
+    document.write(kiemTra(chuoi));
+</script>
+</body>
+</html>

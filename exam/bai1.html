@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhap so nguyen duong n(<500) ");
+    let uocSo = [];
+    let uocSoLe = [];
+    let dem = 0;
+    let tongSoLe = 0;
+    if (n > 500 && NaN(n)) {
+        n = +prompt("Nhap lai n vi >500");
+    }
+    if (n === 0) {
+        document.write("Uoc cua 0 la chinh no");
+    }
+    if (n > 0 && n <= 500) {
+        for (let i = 1; i <= n; i++) {
+            if (n % i === 0) {
+                uocSo.push(i);
+                if (i % 2 === 1) {
+                    uocSoLe.push(i);
+                    dem++;
+                    tongSoLe += i;
+                }
+            }
+        }
+        let tbc = tongSoLe / dem;
+        document.write("uoc so cua" + n + " la" + uocSo + '<br>');
+        document.write('uoc so le ' + uocSoLe + '<br>');
+        document.write('trung binh cong cac uoc so le' + tbc);
+    }
+</script>
+</body>
+</html>

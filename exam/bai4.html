@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    let n;
+
+    class Phim {
+        constructor(maphim, tenphim, ngaychieu, thoiluong, soluongve) {
+            this.maphim = maphim;
+            this.tenphim = tenphim;
+            this.ngaychieu = ngaychieu;
+            this.thoiluong = thoiluong;
+        }
+
+        set soluongve(so) {
+            so = prompt(" nhap so luong ve ")
+            if (num > 0) {
+                this.soluongve = num;
+            }
+        }
+
+        get soluongve() {
+            return this.soluongve ;
+        }
+    }
+
+    let phimA = new Phim('001', 'hoathinh', 20, 180);
+    let phimB = new Phim('002', 'tinhcam', 20, 180);
+    let phimC = new Phim('003', 'kiemhiep', 20, 180);
+
+    let ve = prompt("nhap so luong ve");
+    phimA.soluongve(ve);
+    document.get(phimA);
+
+</script>
+</body>
+</html>
